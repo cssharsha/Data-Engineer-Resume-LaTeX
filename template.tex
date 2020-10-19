@@ -4,7 +4,7 @@
 % Version 1.0 (14/7/16)
 %
 % Original author:
-% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by 
+% Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
 % Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
 %
 % License:
@@ -19,7 +19,7 @@
 \documentclass[letterpaper]{twentysecondcv} % a4paper for A4
 
 % Command for printing skill overview bubbles
-\newcommand\skills{ 
+\newcommand\skills{
 ~
 	\smartdiagram[bubble diagram]{
         \textbf{~~~~~Robotics~~~~~},
@@ -53,10 +53,10 @@
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
 \cvname{GRISWALD\\BROOKS} % Your name
-\cvjobtitle{ Senior Robotics Software } % Job
+\cvjobtitle{ Senior Robotics Engineer } % Job
 % title/career
 
-\cvlinkedin{/in/griswaldbrooks}
+\cvlinkedin{in/griswaldbrooks}
 \cvgithub{griswaldbrooks}
 \cvnumberphone{(347) 638 3633} % Phone number
 \cvsite{griswaldbrooks.com} % Personal website
@@ -81,14 +81,22 @@
         {Senior Robotics Engineer}
         {\href{http://www.bossanova.com/}{Bossanova Robotics}}
         {}
-        {\begin{itemize}
-          \item Managed navigation team and implemented agile workflow, increasing team predictability.
-          \item Refactored navigation stack, increased test coverage, formalized refactor-for-test strategies.
-          \item Implemented stuck retry logic and other navigation improvements to
-                reduce operator touch time and enable large scale robot deployment.
-          \item Created docker container for developers to use to reproduce robot environment and dependencies.
-          \item \textbf{Used}: TOF/LIDAR, C++, Python, ROS, Git, Jenkins, Gtest
-        \end{itemize}}
+				{\begin{itemize}
+			    \item Led navigation stack refactor, improving test coverage and code quality.
+					      Formalized ROS-less programming strategies, producing faster and more robust tests.
+					\item Migrated next generation robot to more robust local planner, avoiding
+					      robot stuck situations and allowing navigation closer to obstacles.
+					\item Solved navigation field issues stemming from costmap race conditions,
+					      lingering state, goal mismatches, and trajectory critics. This
+								supported the scaling of the fleet from 50 to 350 robots.
+			    \item Designed and implemented navigation traceability and observability monitors
+					      enabling engineers to get targeted bag data of an event quickly, obviating
+								the large downloads and manual correlation previously required.
+			    \item Built ground truth label collection system, used to compare results to robot
+			          scans for experimental label detector. Reduced collection time from 30 to
+								8 minutes per aisle, requiring only one operator from two.
+			    \item \textbf{Used}: TOF/LIDAR, C++, Python, ROS, Git, Gtest, Jenkins, inOrbit, Optitrack
+			  \end{itemize}}
         \\
 	\twentyitem
     	{Jul 2016 -}
@@ -101,15 +109,14 @@
         \item Improved docking reliability and added features.
               Refactored infrastructure producing documented unit tested code.
         \item Evaluated multiple tof/stereo cameras for technology selection.
-        \item Spearheaded automated on-robot testing.
+        \item Led automated on-robot testing project.
               Built infrastructure for test fleet command and monitoring.
               Performed team level release engineering duties.
-              Tested incremental builds.
               Released builds to SQA, beta testers, and production.
         \item \textbf{Used}: TOF/LIDAR, C++, Python, JS, QNX, Git, Jenkins, AWS, Catch2
         \end{itemize}}
         }
-    \\   
+    \\
     \twentyitem
    		{Jul 2015 -}
 		{Apr 2016}
@@ -123,20 +130,20 @@
           \item \textbf{Used}: ICP, EKF, C++, Python, ROS, Git, Gtest, LIDAR
         \end{itemize}}
         }
-     \\
-     \twentyitem
-   		{May 2012 -}
-		{Jun 2015}
-        {Robotics Engineer}
-        {\href{http://www.farcotech.com/}{Farco Technologies}}
-        {}
-        {
-        {\begin{itemize}
-          \item Designed/built autopilots, skins, chassis and developed/tested embedded software for AGVs, AUVs, and UAVs.
-          \item \textbf{Used}: Linear Filters, C, EDA, CAD, ARM, IMU, UART, I2C, CAN
-        \end{itemize}}
-        }
-        
+    %  \\
+    %  \twentyitem
+   	% 	{May 2012 -}
+		% {Jun 2015}
+    %     {Robotics Engineer}
+    %     {\href{http://www.farcotech.com/}{Farco Technologies}}
+    %     {}
+    %     {
+    %     {\begin{itemize}
+    %       \item Designed/built autopilots, skins, chassis and developed/tested embedded software for AGVs, AUVs, and UAVs.
+    %       \item \textbf{Used}: Linear Filters, C, EDA, CAD, ARM, IMU, UART, I2C, CAN
+    %     \end{itemize}}
+    %     }
+
 	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
@@ -167,4 +174,4 @@ G. Brooks, P. Krishnamurthy and F. Khorrami, \textbf{“Low-profile crawling for
 G. Brooks, P. Krishnamurthy and F. Khorrami, \textbf{“A multi-gait approach for humanoid navigation in cluttered environments”}, The 26th Chinese Control and Decision Conference (2014 CCDC), Changsha, 2014, pp. 2708-2713.\vspace{2mm}
 G. Brooks, P. Krishnamurthy and F. Khorrami, \textbf{“Humanoid robot navigation and obstacle avoidance in unknown environments”}, Control Conference (ASCC), 2013 9th Asian, Istanbul, 2013, pp. 1-6.\vspace{2mm}
 
-\end{document} 
+\end{document}
