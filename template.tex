@@ -5,7 +5,8 @@
 %
 % Original author:
 % Carmine Spagnuolo (cspagnuolo@unisa.it) with major modifications by
-% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com)
+% Vel (vel@LaTeXTemplates.com) and Harsh (harsh.gadgil@gmail.com).
+% Modifying for personal use by Sree Harsha (sreharshacs@gmail.com)
 %
 % License:
 % The MIT License (see included LICENSE file)
@@ -20,31 +21,33 @@
 
 % Command for printing skill overview bubbles
 \newcommand\skills{
-~
-	\smartdiagram[bubble diagram]{
-        \textbf{~~~~~Robotics~~~~~},
-        \textbf{~~~~~Navigation~~~~~},
-        \textbf{~~~~~~~Docking~~~~~~},
+    ~
+    \smartdiagram[bubble diagram]{
+        \textbf{~~~~~~Robotics~~~~~},
+        \textbf{~~~Mapping~~~}\\\textbf{and}\\\textbf{Localization},
+        \textbf{~~~Calibration~~~},
+        \textbf{~~~Sensor~~~}\\\textbf{~~Integration~~},
         \textbf{Perception},
-        \textbf{~Controls~}
+        \textbf{Navigation}
     }
 }
 
 % Programming skill bars
 \programming{
-  {Javascript / 0.5},
-  {Python / 3},
-  {C++ / 5}}
+    {Scripting Languages / 1},
+    {Python / 3},
+    {C++ / 5}}
 
 % Projects text
 \education{
-  \textbf{MSc., Electrical Engineering}\\
-  NYU School of Engineering\\
-  May 2015 | Brooklyn, NY
+    \textbf{MS, Electrical Engineering and Computer Science} (GPA: 3.86) \\
+    Specialization: Robotics \\
+    University of California, Merced \\
+    Aug 2017 - Dec 2018 | Merced, California
 
-  \textbf{BSc., Computer Engineering}\\
-  NYU School of Engineering\\
-  May 2013 | Brooklyn, NY
+    \textbf{BE, Computer Science} (GPA: 8.26 / 10) \\
+    Siddaganga Institute of Technology \\
+    2010 - 2014 | Tumkur, India
 }
 
 %----------------------------------------------------------------------------------------
@@ -52,15 +55,14 @@
 %----------------------------------------------------------------------------------------
 % If you don't need one or more of the below, just remove the content leaving the command, e.g. \cvnumberphone{}
 
-\cvname{GRISWALD\\BROOKS} % Your name
-\cvjobtitle{ Senior Robotics Engineer } % Job
+\cvname{SREE\\HARSHA\\C S} % Your name
+\cvjobtitle{Software Engineer, Mapping} % Job
 % title/career
 
-\cvlinkedin{in/griswaldbrooks}
-\cvgithub{griswaldbrooks}
-\cvnumberphone{(347) 638 3633} % Phone number
-\cvsite{griswaldbrooks.com} % Personal website
-\cvmail{griswald.brooks@gmail.com} % Email address
+\cvlinkedin{/in/sree-harsha-c-s}
+\cvgithub{cssharsha}
+\cvnumberphone{(209) 658 6725} % Phone number
+\cvmail{cssreddyharsha@gmail.com} % Email address
 
 %----------------------------------------------------------------------------------------
 
@@ -75,103 +77,91 @@
 \section{Experience}
 
 \begin{twenty} % Environment for a list with descriptions
-\twentyitem
-    	{May 2018 -}
-		{Present}
-        {Senior Robotics Engineer}
-        {\href{http://www.bossanova.com/}{Bossanova Robotics}}
-        {}
-				{\begin{itemize}
-			    \item Led navigation stack refactor, improving test coverage and code quality.
-					      Formalized ROS-less programming strategies, producing faster and more robust tests.
-					\item Migrated next generation robot to more robust local planner, avoiding
-					      robot stuck situations and allowing navigation closer to obstacles.
-					\item Solved navigation field issues stemming from costmap race conditions,
-					      lingering state, goal mismatches, and trajectory critics. This
-								supported the scaling of the fleet from 50 to 350 robots.
-			    \item Designed and implemented navigation traceability and observability monitors
-					      enabling engineers to get targeted bag data of an event quickly, obviating
-								the large downloads and manual correlation previously required.
-			    \item Built ground truth label collection system, used to compare results to robot
-			          scans for experimental label detector. Reduced collection time from 30 to
-								8 minutes per aisle, requiring only one operator from two.
-			    \item \textbf{Used}: TOF/LIDAR, C++, Python, ROS, Git, Gtest, Jenkins, inOrbit, Optitrack
-			  \end{itemize}}
-        \\
-	\twentyitem
-    	{Jul 2016 -}
-		{May 2018}
-        {Robotics Software Engineer}
-        {\href{http://www.neatorobotics.com/}{Neato Robotics}}
-        {}
-        {
-        {\begin{itemize}
-        \item Improved docking reliability and added features.
-              Refactored infrastructure producing documented unit tested code.
-        \item Evaluated multiple tof/stereo cameras for technology selection.
-        \item Led automated on-robot testing project.
-              Built infrastructure for test fleet command and monitoring.
-              Performed team level release engineering duties.
-              Released builds to SQA, beta testers, and production.
-        \item \textbf{Used}: TOF/LIDAR, C++, Python, JS, QNX, Git, Jenkins, AWS, Catch2
-        \end{itemize}}
-        }
+    \twentyitem
+    {July 2021 -}
+    {Present}
+    {Software Engineer, Mapping and Sensor Systems}
+    {\href{https://www.optimusride.com//}{Optimus Ride}}
+    {}
+    {\begin{itemize}
+        \item Parallelized the algorithm for detecting board corners leading to a speed up of 2x-5x
+            for different resolution lidars
+        \item Refactor mapping tools for better analysis and visualization of the mapping stack providing easier
+            modification and updation of the factor graph during map bring up
+        \item POC for online out of calibration detection. Used a combination of cost functions to determine
+            better perturbation baselines.
+        \item \textbf{Used}: GTSAM, C++, python, bitbucket
+    \end{itemize}}
     \\
     \twentyitem
-   		{Jul 2015 -}
-		{Apr 2016}
-        {Robotics Engineer}
-        {\href{http://www.fetchrobotics.com}{Fetch Robotics}}
-        {}
-        {
+    {Mar 2019 -}
+    {June 2021}
+    {Software Engineer}
+    {\href{http://www.bossanova.com/}{Bossanova Robotics}}
+    {}
+    {
         {\begin{itemize}
-          \item Developed EKF/LIDAR based tracking of people and mobile robots.
-          \item Increased robustness of charge docking system through improvements in perception, navigation, and recovery behaviors.
-          \item \textbf{Used}: ICP, EKF, C++, Python, ROS, Git, Gtest, LIDAR
+            \item \textbf{Team}: Next-gen
+                {\begin{itemize}
+                    \item Integration of ToF camera and 2D lidars. Wrote ROS wrappers around the SDK along with identifying,
+                        interfacing and debugging the USB device driver provided by the vendor. Developed golden dataset along with
+                        metrics to help chose the sensor for next generation robots.
+                    \item Porting and initial setup of the navigation stack for next generation robots. Involved modifications to move base
+                        in order to allow the robot to navigate at a closer distance to the shelf and obstacles. Integrated the new sensor
+                        suite into the navigation stack.
+                \end{itemize}}
+            \item \textbf{Team}: Perception
+                {\begin{itemize}
+                    \item Designed and implemented sunlight filter to detect and filter noise generated due to sunny spots in ToF camera.
+                    \item Developed intrinsic calibration procedure for rgb cameras modelled as EUCM model.
+                    \item Built a factor graph based 6 DoF calibration system for navigation sensors with april tags as landmarks.
+                \end{itemize}}
+            \item \textbf{Team}: Mapping
+                {\begin{itemize}
+                    \item Implemented an algorithm to perform automatic detection and updation of aisle definitions following
+                        a map update
+                    \item Fine-tune cartographer to generate maps using the sensor stack in the next generation of robots.
+                    \item Setup cartographer in online localization mode and develop an EKF to fuse the pose estimate from cartographer
+                        scan matcher and odometry.
+                \end{itemize}}
+            \item \textbf{Used}: GTSAM, Ceres, ROS, C++, python, git, cmake, catkin, docker
         \end{itemize}}
+    }
+    \\
+    \twentyitem
+    {Jul 2014 -}
+    {Jun 2017}
+    {Software Engineer}
+    {Alcatel-Lucent (Now Nokia)}
+    {}
+    {
+        \begin{itemize}
+            \item Primary worked on developing platform software to provide high availability of ATCA chasis nodes.
+            \item Worked on various OS related issues such as deadlocks, memory utilization and OS patching.
+        \end{itemize}
         }
-    %  \\
-    %  \twentyitem
-   	% 	{May 2012 -}
-		% {Jun 2015}
-    %     {Robotics Engineer}
-    %     {\href{http://www.farcotech.com/}{Farco Technologies}}
-    %     {}
-    %     {
-    %     {\begin{itemize}
-    %       \item Designed/built autopilots, skins, chassis and developed/tested embedded software for AGVs, AUVs, and UAVs.
-    %       \item \textbf{Used}: Linear Filters, C, EDA, CAD, ARM, IMU, UART, I2C, CAN
-    %     \end{itemize}}
-    %     }
 
-	%\twentyitem{<dates>}{<title>}{<location>}{<description>}
+        %\twentyitem{<dates>}{<title>}{<location>}{<description>}
 \end{twenty}
 
 %----------------------------------------------------------------------------------------
-%	 RESEARCH
+%	 PROJECTS
 %----------------------------------------------------------------------------------------
-\section{Research}
+\section{Projects}
 \begin{twenty}
-	\twentyitem
-    	{Jan 2014 -}
-		{2015}
-        {Graduate Research Assistant}
-        {\href{http://crrl.poly.edu/}{Control/Robotics Research Lab at NYU}}
-        {}
-        {
-       	\textbf{Thesis}: Projected Profile Humanoid Crawl Gait and Lidar Based Navigation using GODZILA
+    \twentyitem
+    {2017 - 2018}
+    {}
+    {MS. Candidate}
+    {\href{https://www.ucmerced.edu/}{University of California, Merced}}
+    {}
+    {
         {\begin{itemize}
-          \item Developed novel inverse kinematics crawling gait and potential field navigation using LIDAR/Nao;
-                gradient descent-based IK solver for out-of-workspace end effector poses;
-                LIDAR-based object detection/classification regressors.
-          \item \textbf{Used}: IK, Optimization, Potential Fields, Linear Regression, C++, Matlab, Python, LIDAR, Sonar, Nao
-		\end{itemize}}
-        }
+            \item Designed and developed ROS nodes to detect topological features such as left/right intersection and T-intersection in an indoor environment and identify the kind of intersections along with a local planner to navigate to the interest point of the intersection.
+            \item Using the parametric Bezier curve equation, render a UTAH tea pot with given control points. The normal to the surface of the teapot is also generated which is used for shading.
+            \item Implemented an IK algorithm(FABRIK) to simulate the movement of a chain with 3 joints and four links.
+        \end{itemize}}
+    }
 \end{twenty}
-
-\section{Publications}
-G. Brooks, P. Krishnamurthy and F. Khorrami, \textbf{“Low-profile crawling for humanoid motion in tight spaces”}, Intelligent Robots and Systems (IROS), 2015 IEEE/RSJ International Conference on, Hamburg, 2015, pp. 5930-5935.\vspace{2mm}
-G. Brooks, P. Krishnamurthy and F. Khorrami, \textbf{“A multi-gait approach for humanoid navigation in cluttered environments”}, The 26th Chinese Control and Decision Conference (2014 CCDC), Changsha, 2014, pp. 2708-2713.\vspace{2mm}
-G. Brooks, P. Krishnamurthy and F. Khorrami, \textbf{“Humanoid robot navigation and obstacle avoidance in unknown environments”}, Control Conference (ASCC), 2013 9th Asian, Istanbul, 2013, pp. 1-6.\vspace{2mm}
 
 \end{document}
